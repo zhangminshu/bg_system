@@ -98,6 +98,11 @@
         //返回成功
         success:function(data){
             return this.get('/src/mock/success.json')
+        },
+
+        //侧边导航
+        navMeau:function(){
+            return this.get('/src/mock/navMeau.json')
         }
 
     };
@@ -640,7 +645,7 @@
             return arr;
         },
         randomVerificationCode:function(len){
-            var str ='',
+            var str ='',pos,
                 arr=['0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
                     'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
                     'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',

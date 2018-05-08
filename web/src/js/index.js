@@ -2,13 +2,19 @@
 var indexVm = avalon.define({
     $id: "index",
     name: "司徒正美sdfsdf",
-    array: [11,22,3334234]
+    navMenu: []
 })
 
 indexVm.$watch('onReady', function(){
     var _this = this
+
     setTimeout(function(){
-        indexVm.array.set(0, 444)
-    }, 3000)
+        api.navMeau().then((res)=>{
+            console.log(res.data)
+            if(res.code !==10000)return;
+            _this.navMenu = res.data;
+            layui.element.render()
+        })
+    }, 0)
 
 })

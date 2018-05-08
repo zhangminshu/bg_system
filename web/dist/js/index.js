@@ -1,1 +1,1 @@
-"use strict";var indexVm=avalon.define({$id:"index",name:"司徒正美sdfsdf",array:[11,22,3334234]});indexVm.$watch("onReady",function(){setTimeout(function(){indexVm.array.set(0,444)},3e3)});
+"use strict";var indexVm=avalon.define({$id:"index",name:"司徒正美sdfsdf",navMenu:[]});indexVm.$watch("onReady",function(){var e=this;setTimeout(function(){api.navMeau().then(function(n){console.log(n.data),1e4===n.code&&(e.navMenu=n.data,layui.element.render())})},0)});
