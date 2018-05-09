@@ -34,7 +34,6 @@ del.sync(['dist'])
 
 //编译less
 gulp.task('less', () => {
-
         if(ENV === 'dev'){
             return gulp.src('src/less/main.less')
                 .pipe(plumber({errorHandler: notify.onError('Error: <%= error.message %>')}))   //错误不终止并给出提示
@@ -186,10 +185,10 @@ gulp.task('copyImg', () => {
 
 });
 
-gulp.task('copyVideo', () => {
-    return gulp.src('src/video/*.*')
-        .pipe(gulp.dest('dist/video'))
-});
+// gulp.task('copyVideo', () => {
+//     return gulp.src('src/video/*.*')
+//         .pipe(gulp.dest('dist/video'))
+// });
 
 //导入html公共部分   @@include('include/meta.html')
 gulp.task('fileinclude', () => {
@@ -220,17 +219,17 @@ gulp.task('connect', () => {
 });
 
 //移动文件
-gulp.task('moveIndex', () => {
-    return gulp.src('dist/index.html')
-        .pipe(rename({extname: '.php'}))
-        .pipe(gulp.dest(`../../../modules/${projectName}/views/site`));
-});
-
-gulp.task('moveFile', () => {
-   return  gulp.src('dist/*.html')
-       .pipe(rename({extname: '.php'}))
-       .pipe(gulp.dest(`../../../modules/${projectName}/views/news`));
-});
+// gulp.task('moveIndex', () => {
+//     return gulp.src('dist/index.html')
+//         .pipe(rename({extname: '.php'}))
+//         .pipe(gulp.dest(`../../../modules/${projectName}/views/site`));
+// });
+//
+// gulp.task('moveFile', () => {
+//    return  gulp.src('dist/*.html')
+//        .pipe(rename({extname: '.php'}))
+//        .pipe(gulp.dest(`../../../modules/${projectName}/views/news`));
+// });
 
 
 //替换路径

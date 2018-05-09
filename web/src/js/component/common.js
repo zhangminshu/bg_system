@@ -10,12 +10,6 @@
                 .then(function(res){
                     res = $.parseJSON(res)
                     def.resolve(res);
-                    //   if(res.code === 10000){
-                    //       def.resolve(res);
-                    //   }else{
-                    //       dialog.errorMsg(res.msg)
-                    //       def.reject(res);
-                    //   }
                 });
             return def;
         },
@@ -101,9 +95,10 @@
         },
 
         //侧边导航
-        navMeau:function(){
-            return this.get('/src/mock/navMeau.json')
-        }
+        navMenu:function(){
+            return this.get('/src/mock/navMenu.json')
+        },
+
 
     };
 

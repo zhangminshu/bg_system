@@ -1,15 +1,37 @@
 /**
 头部
  */
+.ms-controller{
+  visibility: hidden
+}
 .ms-header{
   height: 78px;
   line-height: 78px;
   background: #383c41!important;
   .ms-logo{
+    width: 256px;
     height: 78px;
     line-height: 78px;
     background: #2f3236;
     color: #cdcccd;
+  }
+  .ms-header-left{
+    left: 280px;
+    top: 0;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 60px;
+  }
+  .btn-add{
+    width: 32px;
+    height: 32px;
+    border: 1px solid #c67692;
+    line-height: 32px;
+    text-align: center;
+    border-radius: 4px;
+    margin-left: 12px;
+    cursor: pointer;
   }
 }
 /**
@@ -18,9 +40,15 @@
 .ms-side-nav-warp{
   top:78px!important;
   background: #303452;
+  width: 256px!important;
+  .layui-side-scroll{
+    width: 276px!important;
+  }
 }
 .ms-nav-tree{
   background-color: #303452;
+  width: 256px!important;
+
 }
 /**
 中间内容
@@ -29,14 +57,86 @@
   top: 78px!important;
   bottom: 2px!important;
   background: #ebeef1;
+  left: 256px;
   .ms-body{
     background: #ffffff;
     margin: 24px;
     padding: 16px;
     border: 1px solid #cdd0dd;
     border-radius: 6px;
+    min-height: 600px;
+    .moduleTop{
+      position: relative;
+      height: 36px;
+      border-bottom: 2px solid #ebeef1;
+      //padding-bottom: 15px;
+    }
   }
 }
 /**
 底部
  */
+
+/**
+其他
+ */
+
+.ms-mark{
+  position: relative;
+  top: 3px;
+  margin-right: 5px;
+  width: 4px;
+  height: 15px;
+  display: inline-block;
+  border-radius: 4px;
+  background: #53a3ff;
+}
+.ms-mark-red{
+  position: relative;
+  top: 0;
+  margin-right: 5px;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 4px;
+  background: #fd6a47;
+}
+.ms-mark-green{
+  position: relative;
+  top: 0;
+  margin-right: 5px;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 4px;
+  background: #6dd041;
+}
+.ms-item{
+  position: relative;
+  display: inline-block;
+}
+.ms-clear:after {
+  clear:both;
+  content:'.';
+  display:block;
+  width: 0;
+  height: 0;
+  visibility:hidden;
+}
+.ms-left{
+  float: left;
+}
+.ms-right{
+  float:right;
+}
+.ms-ml25{
+  margin-left: 25px;
+}
+.navIcon{
+  position: relative;
+  top: 3px;
+  margin-right: 5px;
+}
+.ms-nav-item{
+  padding-left:50px;
+}

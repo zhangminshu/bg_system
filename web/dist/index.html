@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../dist/css/main.css?rev=@@hash">
     <script type="text/javascript" src="../dist/lib/avalon/avalon.js?rev=@hash"></script>
     <script type="text/javascript" src="../dist/lib/jquery/jquery.min.js?rev=@hash"></script>
+    <script type="text/javascript" src="../dist/lib/echart/echarts.min.js?rev=@hash"></script>
     <script type="text/javascript" src="../dist/lib/layui/layui.js?rev=@hash"></script>
     <script type="text/javascript" src="../dist/js/component.js?rev=@@hash"></script>
     <script src="../dist/js/index.js?rev=@@hash"></script>
@@ -23,14 +24,16 @@
 <div class="layui-layout layui-layout-admin ms-controller"  ms-controller="index">
     <div class="layui-header layui-form ms-header">
         <div class="layui-logo ms-logo">demo</div>
-        <ul class="layui-nav layui-layout-left">
-            <li class="layui-nav-item">
-                <select name="city" lay-verify="">
-                    <option value="010">北京</option>
-                    <option value="0571" selected>杭州</option>
-                </select>
-            </li>
-        </ul>
+        <div class="ms-header-left">
+            <select name="city" lay-verify="">
+                <option value="010">北京</option>
+                <option value="0571" selected>杭州</option>
+            </select>
+
+        </div>
+        <div class="ms-header-left">
+            <div class="btn-add"><span class="icon-add"></span></div>
+        </div>
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
                 <a href="javascript:;">
@@ -46,10 +49,16 @@
             <div class="layui-side-scroll">
                 <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
                 <ul class="layui-nav layui-nav-tree ms-nav-tree"  lay-filter="test">
-                    <li class="layui-nav-item layui-nav-itemed" :for="(index,item) in @navMenu">
-                        <a class="" href="javascript:;">{{item.name}}</a>
+                    <li :for="(index,item) in @navMenu" class="layui-nav-item layui-nav-itemed" :if="index==0">
+                        <a href="javascript:;"><span class="navIcon" :class="'icon-'+(@index+1)"></span>{{item.name}}</a>
                         <dl class="layui-nav-child" :if="item.list">
-                            <dd :for="subItem in item.list"><a href="javascript:;">{{subItem.name}}</a></dd>
+                            <dd class="ms-nav-item" :for="subItem in item.list"><a href="javascript:;">{{subItem.name}}</a></dd>
+                        </dl>
+                    </li>
+                    <li :for="(index,item) in @navMenu" class="layui-nav-item" :if="index!=0">
+                        <a href="javascript:;" ><span class="navIcon" :class="'icon-'+(@index+1)"></span>{{item.name}}</a>
+                        <dl class="layui-nav-child" :if="item.list">
+                            <dd class="ms-nav-item" :for="subItem in item.list"><a href="javascript:;">{{subItem.name}}</a></dd>
                         </dl>
                     </li>
                 </ul>
@@ -59,7 +68,13 @@
         <div class="layui-body main-content-warp">
             <!-- 内容主体区域 -->
             <div class="ms-body">
-                内容主体区域
+                <div class="moduleTop">
+                    <div class="ms-clear">
+                        <div class="ms-left"><span class="ms-mark"></span>主要数据</div>
+                        <div class="ms-right ms-ml25"><span class="ms-mark-green"></span>值 < 0</div>
+                        <div class="ms-right "><span class="ms-mark-red"></span>值 > 0</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

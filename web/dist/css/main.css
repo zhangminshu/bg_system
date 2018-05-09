@@ -1,16 +1,87 @@
+.icon-1 {
+  display: inline-block;
+  background-image: url(../img/sprite.png);
+  background-position: -38px -49px;
+  width: 17px;
+  height: 17px;
+}
+.icon-2 {
+  display: inline-block;
+  background-image: url(../img/sprite.png);
+  background-position: -94px 0px;
+  width: 18px;
+  height: 16px;
+}
+.icon-3 {
+  display: inline-block;
+  background-image: url(../img/sprite.png);
+  background-position: 0px -49px;
+  width: 18px;
+  height: 17px;
+}
+.icon-add {
+  display: inline-block;
+  background-image: url(../img/sprite.png);
+  background-position: 0px -86px;
+  width: 11px;
+  height: 11px;
+}
+.icon-logout {
+  display: inline-block;
+  background-image: url(../img/sprite.png);
+  background-position: -94px -36px;
+  width: 11px;
+  height: 13px;
+}
+.icon-mark {
+  display: inline-block;
+  background-image: url(../img/sprite.png);
+  background-position: 0px 0px;
+  width: 30px;
+  height: 29px;
+}
+.icon-prpject_icon {
+  display: inline-block;
+  background-image: url(../img/sprite.png);
+  background-position: -50px 0px;
+  width: 24px;
+  height: 20px;
+}
 /**
 头部
  */
+.ms-controller {
+  visibility: hidden;
+}
 .ms-header {
   height: 78px;
   line-height: 78px;
   background: #383c41!important;
 }
 .ms-header .ms-logo {
+  width: 256px;
   height: 78px;
   line-height: 78px;
   background: #2f3236;
   color: #cdcccd;
+}
+.ms-header .ms-header-left {
+  left: 280px;
+  top: 0;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 60px;
+}
+.ms-header .btn-add {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #c67692;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 4px;
+  margin-left: 12px;
+  cursor: pointer;
 }
 /**
 侧边导航
@@ -18,9 +89,14 @@
 .ms-side-nav-warp {
   top: 78px!important;
   background: #303452;
+  width: 256px!important;
+}
+.ms-side-nav-warp .layui-side-scroll {
+  width: 276px!important;
 }
 .ms-nav-tree {
   background-color: #303452;
+  width: 256px!important;
 }
 /**
 中间内容
@@ -29,6 +105,7 @@
   top: 78px!important;
   bottom: 2px!important;
   background: #ebeef1;
+  left: 256px;
 }
 .main-content-warp .ms-body {
   background: #ffffff;
@@ -36,7 +113,75 @@
   padding: 16px;
   border: 1px solid #cdd0dd;
   border-radius: 6px;
+  min-height: 600px;
+}
+.main-content-warp .ms-body .moduleTop {
+  position: relative;
+  height: 36px;
+  border-bottom: 2px solid #ebeef1;
 }
 /**
 底部
  */
+/**
+其他
+ */
+.ms-mark {
+  position: relative;
+  top: 3px;
+  margin-right: 5px;
+  width: 4px;
+  height: 15px;
+  display: inline-block;
+  border-radius: 4px;
+  background: #53a3ff;
+}
+.ms-mark-red {
+  position: relative;
+  top: 0;
+  margin-right: 5px;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 4px;
+  background: #fd6a47;
+}
+.ms-mark-green {
+  position: relative;
+  top: 0;
+  margin-right: 5px;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-radius: 4px;
+  background: #6dd041;
+}
+.ms-item {
+  position: relative;
+  display: inline-block;
+}
+.ms-clear:after {
+  clear: both;
+  content: '.';
+  display: block;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+.ms-left {
+  float: left;
+}
+.ms-right {
+  float: right;
+}
+.ms-ml25 {
+  margin-left: 25px;
+}
+.navIcon {
+  position: relative;
+  top: 3px;
+  margin-right: 5px;
+}
+.ms-nav-item {
+  padding-left: 50px;
+}
