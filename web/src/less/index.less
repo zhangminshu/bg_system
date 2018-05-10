@@ -64,12 +64,27 @@
     padding: 16px;
     border: 1px solid #cdd0dd;
     border-radius: 6px;
-    min-height: 600px;
+    min-height: 200px;
     .moduleTop{
       position: relative;
       height: 36px;
       border-bottom: 2px solid #ebeef1;
       //padding-bottom: 15px;
+    }
+    .moduleContent{
+      .moduleTable{
+        padding: 50px;
+        ul{
+          display:table;
+          width: 100%;
+        }
+        ul>li{
+          display: table-cell;
+          width: 20%;
+          height: 70px;
+          vertical-align: middle;
+        }
+      }
     }
   }
 }

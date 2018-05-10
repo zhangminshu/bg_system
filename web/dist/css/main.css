@@ -113,12 +113,25 @@
   padding: 16px;
   border: 1px solid #cdd0dd;
   border-radius: 6px;
-  min-height: 600px;
+  min-height: 200px;
 }
 .main-content-warp .ms-body .moduleTop {
   position: relative;
   height: 36px;
   border-bottom: 2px solid #ebeef1;
+}
+.main-content-warp .ms-body .moduleContent .moduleTable {
+  padding: 50px;
+}
+.main-content-warp .ms-body .moduleContent .moduleTable ul {
+  display: table;
+  width: 100%;
+}
+.main-content-warp .ms-body .moduleContent .moduleTable ul > li {
+  display: table-cell;
+  width: 20%;
+  height: 70px;
+  vertical-align: middle;
 }
 /**
 底部

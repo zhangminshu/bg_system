@@ -6,6 +6,7 @@
 </head>
 
 <body>
+
 <div class="layui-layout layui-layout-admin ms-controller"  ms-controller="index">
     <div class="layui-header layui-form ms-header">
         <div class="layui-logo ms-logo">demo</div>
@@ -17,7 +18,7 @@
 
         </div>
         <div class="ms-header-left">
-            <div class="btn-add"><span class="icon-add"></span></div>
+            <div class="btn-add" :click="@showDialog"><span class="icon-add"></span></div>
         </div>
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
@@ -30,26 +31,7 @@
     </div>
 
     <div class="container">
-        <div class="layui-side ms-side-nav-warp">
-            <div class="layui-side-scroll">
-                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
-                <ul class="layui-nav layui-nav-tree ms-nav-tree"  lay-filter="test">
-                    <li :for="(index,item) in @navMenu" class="layui-nav-item layui-nav-itemed" :if="index==0">
-                        <a href="javascript:;"><span class="navIcon" :class="'icon-'+(@index+1)"></span>{{item.name}}</a>
-                        <dl class="layui-nav-child" :if="item.list">
-                            <dd class="ms-nav-item" :for="subItem in item.list"><a href="javascript:;">{{subItem.name}}</a></dd>
-                        </dl>
-                    </li>
-                    <li :for="(index,item) in @navMenu" class="layui-nav-item" :if="index!=0">
-                        <a href="javascript:;" ><span class="navIcon" :class="'icon-'+(@index+1)"></span>{{item.name}}</a>
-                        <dl class="layui-nav-child" :if="item.list">
-                            <dd class="ms-nav-item" :for="subItem in item.list"><a href="javascript:;">{{subItem.name}}</a></dd>
-                        </dl>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
+        <xmp is="ms-slide" :widget="{ active: 1 }"></xmp>
         <div class="layui-body main-content-warp">
             <!-- 内容主体区域 -->
             <div class="ms-body">
@@ -59,6 +41,55 @@
                         <div class="ms-right ms-ml25"><span class="ms-mark-green"></span>值 < 0</div>
                         <div class="ms-right "><span class="ms-mark-red"></span>值 > 0</div>
                     </div>
+                </div>
+                <div class="moduleContent">
+                    <div class="moduleTable">
+                        <ul>
+                            <li>
+                                <p>累计花费</p>
+                                <p>￥12312</p>
+                            </li>
+                            <li>
+                                <p>累计收入</p>
+                                <p>￥342</p>
+                            </li>
+                            <li>
+                                <p>累计XX收入</p>
+                                <p>￥123113</p>
+                            </li>
+                            <li>
+                                <p>缺口</p>
+                                <p>￥23444</p>
+                            </li>
+                            <li>
+                                <p>研发分成后缺口</p>
+                                <p>￥12313</p>
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <p>累计花费</p>
+                                <p>￥12312</p>
+                            </li>
+                            <li>
+                                <p>累计收入</p>
+                                <p>￥342</p>
+                            </li>
+                            <li>
+                                <p></p>
+                                <p></p>
+                            </li>
+                            <li>
+                                <p></p>
+                                <p></p>
+                            </li>
+                            <li>
+                                <p></p>
+                                <p></p>
+                            </li>
+                        </ul>
+                    </div>
+
                 </div>
             </div>
         </div>

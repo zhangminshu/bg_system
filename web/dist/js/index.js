@@ -1,1 +1,1 @@
-"use strict";var indexVm=avalon.define({$id:"index",navMenu:[]});indexVm.$watch("onReady",function(){var n=this;setTimeout(function(){api.navMenu().then(function(e){1e4===e.code&&(n.navMenu=e.data,layui.element.render())})},0)});
+"use strict";var indexVm=avalon.define({$id:"index",showDialog:function(){layer.open()}});indexVm.$watch("onReady",function(){setTimeout(function(){},0)});
