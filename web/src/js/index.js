@@ -9,7 +9,6 @@ var indexVm = avalon.define({
 indexVm.$watch('onReady', function(){
     var _this = this
     setTimeout(function(){
-
     }, 0)
 
 })

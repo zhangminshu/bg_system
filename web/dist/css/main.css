@@ -22,14 +22,21 @@
 .icon-add {
   display: inline-block;
   background-image: url(../img/sprite.png);
-  background-position: 0px -86px;
+  background-position: -31px -86px;
   width: 11px;
   height: 11px;
+}
+.icon-close {
+  display: inline-block;
+  background-image: url(../img/sprite.png);
+  background-position: -94px -36px;
+  width: 14px;
+  height: 14px;
 }
 .icon-logout {
   display: inline-block;
   background-image: url(../img/sprite.png);
-  background-position: -94px -36px;
+  background-position: 0px -86px;
   width: 11px;
   height: 13px;
 }
@@ -197,4 +204,33 @@
 }
 .ms-nav-item {
   padding-left: 50px;
+}
+.ms-dialog {
+  border: 1px solid #cdd0dd;
+  border-radius: 6px;
+}
+.ms-dialog .dialog-head {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #ebeef1;
+}
+.ms-dialog .dialog-head .title {
+  font-size: 16px;
+  color: #666666;
+  margin-left: 30px;
+}
+.ms-dialog .dialog-head .iconBtn {
+  margin-right: 20px;
+}
+.ms-dialog .dialog-foot {
+  text-align: center;
+}
+.ms-dialog .dialog-foot .ms-ok {
+  width: 134px;
+  height: 36px;
+  text-align: center;
+}
+.ms-dialog.dialog-select {
+  width: 688px;
+  height: 568px;
 }
