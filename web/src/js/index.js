@@ -1,8 +1,20 @@
 
 var indexVm = avalon.define({
     $id: "index",
+    isShow:true,
+    cbProxy: function(ok){
+        console.log(ok)
+        console.log(1231)
+        this.isShow = false;
+    },
     showDialog(){
-        layer.open()
+        this.isShow = true;
+    },
+    onClose(data){
+        this.isShow = false;
+    },
+    onConfirm(){
+
     }
 })
 

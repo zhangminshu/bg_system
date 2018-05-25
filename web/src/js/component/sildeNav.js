@@ -23,7 +23,6 @@ avalon.component('ms-slide', {
             var _this = this
             setTimeout(function(){
                 api.navMenu().then(function(res){
-                    console.log(res)
                     if(res.code !==10000)return;
                     _this.navMenu = res.data;
                     layui.element.render()

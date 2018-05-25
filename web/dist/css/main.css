@@ -54,6 +54,146 @@
   width: 24px;
   height: 20px;
 }
+.ms-dialog-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10000;
+}
+.ms-dialog-box .ms-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000000;
+  opacity: 0.9;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.ms-dialog-box .ms-dialog {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 2;
+  background: #fff;
+  border: 1px solid #cdd0dd;
+  border-radius: 6px;
+}
+.ms-dialog-box .ms-dialog .dialog-head {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #ebeef1;
+}
+.ms-dialog-box .ms-dialog .dialog-head .title {
+  font-size: 16px;
+  color: #666666;
+  margin-left: 30px;
+}
+.ms-dialog-box .ms-dialog .dialog-head .iconBtn {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  cursor: pointer;
+}
+.ms-dialog-box .ms-dialog .dialog-body {
+  margin: 20px 51px 33px 51px;
+}
+.ms-dialog-box .ms-dialog .dialog-body .list-left,
+.ms-dialog-box .ms-dialog .dialog-body .list-right {
+  width: 261px;
+}
+.ms-dialog-box .ms-dialog .dialog-body .list-left .list-title,
+.ms-dialog-box .ms-dialog .dialog-body .list-right .list-title {
+  font-weight: bold;
+  color: #666666;
+  margin-bottom: 15px;
+}
+.ms-dialog-box .ms-dialog .dialog-body .list-left .list-body,
+.ms-dialog-box .ms-dialog .dialog-body .list-right .list-body {
+  background: #f8f9fd;
+  height: 378px;
+  overflow: hidden;
+}
+.ms-dialog-box .ms-dialog .dialog-body .list-left .list-body .list-search,
+.ms-dialog-box .ms-dialog .dialog-body .list-right .list-body .list-search {
+  text-align: center;
+}
+.ms-dialog-box .ms-dialog .dialog-body .list-left .list-body .list-search input,
+.ms-dialog-box .ms-dialog .dialog-body .list-right .list-body .list-search input {
+  width: 234px;
+  height: 32px;
+  padding-left: 10px;
+  border: 1px solid #d0d0d3;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+.ms-dialog-box .ms-dialog .dialog-body .list-left .list-body .list,
+.ms-dialog-box .ms-dialog .dialog-body .list-right .list-body .list {
+  padding-top: 10px;
+  height: 324px;
+  overflow-x: hidden;
+}
+.ms-dialog-box .ms-dialog .dialog-body .list-left .list-body .list .list-item,
+.ms-dialog-box .ms-dialog .dialog-body .list-right .list-body .list .list-item {
+  padding-left: 20px;
+  height: 30px;
+  line-height: 30px;
+  cursor: pointer;
+}
+.ms-dialog-box .ms-dialog .dialog-body .list-left .list-body .list .list-item:hover,
+.ms-dialog-box .ms-dialog .dialog-body .list-right .list-body .list .list-item:hover {
+  background: #d5e6f5;
+  color: #000000;
+}
+.ms-dialog-box .ms-dialog .dialog-body .list-left .list-body .list .list-item.selected,
+.ms-dialog-box .ms-dialog .dialog-body .list-right .list-body .list .list-item.selected {
+  background: #53a3ff;
+  color: #edf4ff;
+}
+.ms-dialog-box .ms-dialog .dialog-body .list-left .list-body .list-right,
+.ms-dialog-box .ms-dialog .dialog-body .list-right .list-body .list-right {
+  height: 368px;
+}
+.ms-dialog-box .ms-dialog .dialog-body .list-middle {
+  position: relative;
+  top: 150px;
+  width: 34px;
+  margin: 0 15px;
+  text-align: center;
+}
+.ms-dialog-box .ms-dialog .dialog-body .list-middle .btn-left,
+.ms-dialog-box .ms-dialog .dialog-body .list-middle .btn-right {
+  width: 34px;
+  height: 32px;
+  cursor: pointer;
+  border: 1px solid #cdd0dd;
+  line-height: 32px;
+  color: #cdd0dd;
+  border-radius: 4px;
+  margin-bottom: 19px;
+}
+.ms-dialog-box .ms-dialog .dialog-foot {
+  text-align: center;
+}
+.ms-dialog-box .ms-dialog .dialog-foot .ms-ok {
+  width: 134px;
+  height: 36px;
+  background: #6dbf48;
+  display: inline-block;
+  line-height: 36px;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.ms-dialog-box .ms-dialog.dialog-select {
+  width: 688px;
+  height: 568px;
+}
 /**
 头部
  */
@@ -204,33 +344,4 @@
 }
 .ms-nav-item {
   padding-left: 50px;
-}
-.ms-dialog {
-  border: 1px solid #cdd0dd;
-  border-radius: 6px;
-}
-.ms-dialog .dialog-head {
-  height: 50px;
-  line-height: 50px;
-  border-bottom: 1px solid #ebeef1;
-}
-.ms-dialog .dialog-head .title {
-  font-size: 16px;
-  color: #666666;
-  margin-left: 30px;
-}
-.ms-dialog .dialog-head .iconBtn {
-  margin-right: 20px;
-}
-.ms-dialog .dialog-foot {
-  text-align: center;
-}
-.ms-dialog .dialog-foot .ms-ok {
-  width: 134px;
-  height: 36px;
-  text-align: center;
-}
-.ms-dialog.dialog-select {
-  width: 688px;
-  height: 568px;
 }

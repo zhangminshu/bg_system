@@ -1,1 +1,1 @@
-"use strict";var indexVm=avalon.define({$id:"index",showDialog:function(){layer.open()}});indexVm.$watch("onReady",function(){setTimeout(function(){},0)});
+"use strict";var indexVm=avalon.define({$id:"index",isShow:!0,cbProxy:function(o){console.log(o),console.log(1231),this.isShow=!1},showDialog:function(){this.isShow=!0},onClose:function(o){this.isShow=!1},onConfirm:function(){}});indexVm.$watch("onReady",function(){setTimeout(function(){},0)});

@@ -5,9 +5,9 @@
     <script src="../dist/js/index.js?rev=@@hash"></script>
 </head>
 
-<body>
+<body ms-controller="index" class="ms-controller">
 
-<div class="layui-layout layui-layout-admin ms-controller"  ms-controller="index">
+<div class="layui-layout layui-layout-admin "  >
     <div class="layui-header layui-form ms-header">
         <div class="layui-logo ms-logo">demo</div>
         <div class="ms-header-left">
@@ -18,7 +18,7 @@
 
         </div>
         <div class="ms-header-left">
-            <div class="btn-add" :click="@showDialog"><span class="icon-add"></span></div>
+            <div class="btn-add" ms-click="@showDialog()"><span class="icon-add"></span></div>
         </div>
         <ul class="layui-nav layui-layout-right">
             <li class="layui-nav-item">
@@ -90,21 +90,6 @@
                         </ul>
                     </div>
 
-                    <div class="ms-dialog dialog-select">
-                        <div class="dialog-head ms-clear">
-                            <div class="title ms-left">标题</div>
-                            <div class="iconBtn close ms-right"><i class="icon-close"></i></div>
-                        </div>
-                        <div class="dialog-body">
-                            <div class="layui-form">
-neirong
-                            </div>
-
-                        </div>
-                        <div class="dialog-foot">
-                            <span class="ms-ok">确定</span>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -112,5 +97,7 @@ neirong
 
 
 </div>
+
+<xmp is="ms-dialog" :widget="{ isShow: @isShow,cbProxy : @cbProxy,onClose:@onClose }"></xmp>
 </body>
 </html>
